@@ -11,7 +11,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 
-public class AddSupplier_ProdTest {
+public class AddSupplier_ProdPage {
 	ExcelUtility eu=new ExcelUtility();
 	WebDriver driver;
 	@FindBy(xpath = "//span[.='Supplier']")
@@ -53,7 +53,7 @@ public class AddSupplier_ProdTest {
 	
 	
 
-	public AddSupplier_ProdTest(WebDriver driver) {
+	public AddSupplier_ProdPage(WebDriver driver) {
 		PageFactory.initElements(driver, this);
 		this.driver = driver;
 	}

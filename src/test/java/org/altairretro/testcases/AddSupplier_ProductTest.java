@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.Map;
 
 import org.ar.genericUtility.BaseClass_SI;
-import org.ar.obejctrepo.AddSupplier_ProdTest;
+import org.ar.obejctrepo.AddSupplier_ProdPage;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -16,7 +16,7 @@ public class AddSupplier_ProductTest extends BaseClass_SI {
 
 	@Test
 	public void AddSupplier_Product() {
-		AddSupplier_ProdTest prodsup = new AddSupplier_ProdTest(driver);
+		AddSupplier_ProdPage prodsup = new AddSupplier_ProdPage(driver);
 		prodsup.clickOnSupplierTab();
 		prodsup.clickOnAddSupp();
 		Map<String, String> map = excelutility.getDataFromExcelByMap("Product_Supplier");

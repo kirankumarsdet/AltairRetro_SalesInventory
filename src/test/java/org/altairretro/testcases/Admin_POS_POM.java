@@ -4,7 +4,7 @@ import org.ar.genericUtility.ExcelUtility;
 import org.ar.genericUtility.FileUtility;
 import org.ar.genericUtility.IConstantpath;
 import org.ar.genericUtility.WebDriverUtility;
-import org.ar.obejctrepo.CommonPageTest;
+import org.ar.obejctrepo.CommonPagePage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -32,7 +32,7 @@ public class Admin_POS_POM {
 		String Customer_name = Eu.getdatafromExcel("Admin_POS", 2, 3);
 		WebDriver driver = WebD.openApplication(browser, url, 10);
 		//driver.findElement(By.xpath(SI_path)).click();
-		CommonPageTest CP = new CommonPageTest(driver);
+		CommonPagePage CP = new CommonPagePage(driver);
 		CP.Login();
 		WebD.alert();
 		CP.POStab();

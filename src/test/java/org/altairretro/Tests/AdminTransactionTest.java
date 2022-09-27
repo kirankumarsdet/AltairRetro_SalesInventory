@@ -8,19 +8,19 @@ import java.util.Map;
 
 import org.ar.genericUtility.BaseClass_SI;
 import org.ar.genericUtility.IConstantpath;
-import org.ar.obejctrepo.Admin_TransactionTest;
-import org.ar.obejctrepo.CommonPageTest;
+import org.ar.obejctrepo.Admin_TransactionPage;
+import org.ar.obejctrepo.CommonPagePage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class AdminTransactionTest extends BaseClass_SI {
-	Admin_TransactionTest at;
+	Admin_TransactionPage at;
 
 	@Test
 	public void AdminTransactions() {
-		at = new Admin_TransactionTest(driver);
+		at = new Admin_TransactionPage(driver);
 		at.clickOnPos();
 		Map<String, String> map = excelutility.getDataFromExcelByMap("Admin_POS");
 		at.productcategoryclick(map.get("Product_Category"));
@@ -53,7 +53,7 @@ public class AdminTransactionTest extends BaseClass_SI {
 		at.proceedTopayment();
 		webdriver.alert();
 		cp.profileclick();
-		CommonPageTest cp= new CommonPageTest(driver);
+		CommonPagePage cp= new CommonPagePage(driver);
 		cp.Login();
 		webdriver.alert();
 		at.clickOnTransaction();

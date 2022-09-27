@@ -9,7 +9,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 
-public class CommonPageTest {
+public class CommonPagePage {
 	FileUtility fileutility= new FileUtility();
 	WebDriver driver=null;
 	private String dynamicXpath="//ul[@class='nav nav-tabs']/li/a[.='%s']";
@@ -57,7 +57,7 @@ public class CommonPageTest {
 	
 	
 // Initialization
- public CommonPageTest(WebDriver driver)
+ public CommonPagePage(WebDriver driver)
  {
 	 PageFactory.initElements(driver, this);
 	 this.driver=driver;

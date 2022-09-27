@@ -4,17 +4,17 @@ import java.util.List;
 import java.util.Map;
 
 import org.ar.genericUtility.BaseClass_SI;
-import org.ar.obejctrepo.Add_CustomerTest;
+import org.ar.obejctrepo.Add_CustomerPage;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class AddCustomerTest extends BaseClass_SI {
-	Add_CustomerTest addcustomer;
+	Add_CustomerPage addcustomer;
 
 	@Test(retryAnalyzer = org.ar.genericUtility.RetryImplementation.class)
 	public void AddProduct() {
-		addcustomer = new Add_CustomerTest(driver);
+		addcustomer = new Add_CustomerPage(driver);
 		addcustomer.clickOncustTab();
 		Map<String, String> map = excelutility.getDataFromExcelByMap("Add_Customers");
 		String firstname = map.get("First_name");

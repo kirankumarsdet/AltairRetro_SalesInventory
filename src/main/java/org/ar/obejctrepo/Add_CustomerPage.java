@@ -9,7 +9,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class Add_CustomerTest {
+public class Add_CustomerPage {
 	WebDriver driver;
 	WebDriverUtility web= new WebDriverUtility();
 	@FindBy(xpath = "//span[.='Customer']")
@@ -52,7 +52,7 @@ public class Add_CustomerTest {
 		return element;
 	}
 
-	public Add_CustomerTest(WebDriver driver) {
+	public Add_CustomerPage(WebDriver driver) {
 		PageFactory.initElements(driver, this);
 		this.driver = driver;
 	}

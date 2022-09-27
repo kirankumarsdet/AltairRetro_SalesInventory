@@ -2,8 +2,8 @@ package org.ar.genericUtility;
 
 import static org.testng.Assert.assertEquals;
 
-import org.ar.obejctrepo.CommonPageTest;
-import org.ar.obejctrepo.CreateUser_AccountTest;
+import org.ar.obejctrepo.CommonPagePage;
+import org.ar.obejctrepo.CreateUser_AccountPage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -16,8 +16,8 @@ public class BaseClass_SI {
 	protected WebDriverUtility webdriver;
 	protected ExcelUtility excelutility;
 	protected FileUtility fileutility;
-	protected CommonPageTest cp;
-	private CreateUser_AccountTest ua;
+	protected CommonPagePage cp;
+	private CreateUser_AccountPage ua;
 	public static WebDriver sdriver;
 
 	@Parameters/*(value="browser")*/
@@ -32,7 +32,7 @@ public class BaseClass_SI {
 		String url = fileutility.FetchUrl(IConstantpath.PROPERTY_FILE_XPATH, "url");
 		driver = webdriver.openApplication(browser, url, 10);
 		sdriver=driver;
-		cp = new CommonPageTest(driver);
+		cp = new CommonPagePage(driver);
 		String LoginPage = driver.findElement(By.xpath("//h1[.='Welcome to Sales and Inventory!']")).getText();
 		assertEquals(LoginPage, "Welcome to Sales and Inventory!");
 		String username = fileutility.FetchUrl(IConstantpath.PROPERTY_FILE_XPATH, "username");

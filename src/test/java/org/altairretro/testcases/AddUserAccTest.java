@@ -4,17 +4,17 @@ import java.util.List;
 import java.util.Map;
 
 import org.ar.genericUtility.BaseClass_SI;
-import org.ar.obejctrepo.CreateUser_AccountTest;
+import org.ar.obejctrepo.CreateUser_AccountPage;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class AddUserAccTest extends BaseClass_SI {
-	private CreateUser_AccountTest ac;
+	private CreateUser_AccountPage ac;
 
 	@Test
 	public void addUserAccTest() {
-		ac = new CreateUser_AccountTest(driver);
+		ac = new CreateUser_AccountPage(driver);
 		ac.userAccTab();
 		String Admintext = ac.adminAcc();
 		Assert.assertEquals(Admintext, "Admin Account(s)");

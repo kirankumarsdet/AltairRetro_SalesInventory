@@ -8,7 +8,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class Admin_TransactionTest {
+public class Admin_TransactionPage {
 	WebDriver driver;
 	@FindBy(xpath = "//span[text()='POS']")
 	private WebElement clickonPOS;
@@ -39,7 +39,7 @@ public class Admin_TransactionTest {
 	private List<WebElement> customerlist;
 	
 
-	public Admin_TransactionTest(WebDriver driver) {
+	public Admin_TransactionPage(WebDriver driver) {
 		PageFactory.initElements(driver, this);
 		this.driver = driver;
 	}

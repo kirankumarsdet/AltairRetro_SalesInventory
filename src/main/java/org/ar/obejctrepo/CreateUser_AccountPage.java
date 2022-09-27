@@ -9,7 +9,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.FindBys;
 import org.openqa.selenium.support.PageFactory;
 
-public class CreateUser_AccountTest {
+public class CreateUser_AccountPage {
 	WebDriver driver;
 	@FindBy(xpath="//span[text()='Accounts']")
 	private WebElement accounts;
@@ -28,7 +28,7 @@ public class CreateUser_AccountTest {
 	@FindBy (xpath="//h4[contains(.,'User')]/../following::tbody//td[2]")
 	private List<WebElement> listof;
 	
-	public CreateUser_AccountTest(WebDriver driver){
+	public CreateUser_AccountPage(WebDriver driver){
 		PageFactory.initElements(driver, this);
 		this.driver=driver;
 	}
